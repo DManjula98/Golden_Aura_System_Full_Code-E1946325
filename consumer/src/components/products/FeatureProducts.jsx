@@ -23,6 +23,7 @@ const FeatureProducts = ({products}) => {
       }))
     }else{
       navigate('/login')
+      window.scrollTo(0, 0); 
     }
   }
 
@@ -51,6 +52,7 @@ const add_wishlist = (product) => {
   }))
   } else{
     navigate('/login')
+    window.scrollTo(0, 0); 
   }
 }
 

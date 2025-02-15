@@ -28,6 +28,7 @@ const ShopProducts = ({ products, styles }) => {
       );
     } else {
       navigate("/login");
+      window.scrollTo(0, 0); 
     }
   };
 
@@ -50,6 +51,7 @@ const ShopProducts = ({ products, styles }) => {
       );
     } else {
       navigate("/login");
+      window.scrollTo(0, 0); 
     }
   };
 

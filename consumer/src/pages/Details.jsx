@@ -59,6 +59,9 @@ const Details = () => {
   const [image, setImage] = useState("");
   const [state, setState] = useState("reviews");
   const [quantity, setQuantity] = useState(1);
+  const handleLinkClick = () => {
+    window.scrollTo(0, 0);
+  };
 
   useEffect(() => {
     if (slug) {
@@ -92,6 +95,7 @@ const Details = () => {
       );
     } else {
       navigate("/login");
+      window.scrollTo(0, 0); 
     }
   };
 
@@ -114,6 +118,7 @@ const Details = () => {
       );
     } else {
       navigate("/login");
+      window.scrollTo(0, 0); 
     }
   };
 
@@ -146,6 +151,7 @@ const Details = () => {
         items: 1,
       },
     });
+    window.scrollTo(0, 0); 
   };
 
   useEffect(() => {
@@ -317,7 +323,9 @@ const Details = () => {
                     <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#7fad39] hover:text-white flex justify-center items-center bg-indigo-500 rounded-full text-white"
-                        href="#"
+                        href="https://www.facebook.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaFacebookF />
                       </a>
@@ -325,7 +333,9 @@ const Details = () => {
                     <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#7fad39] hover:text-white flex justify-center items-center bg-cyan-500 rounded-full text-white"
-                        href="#"
+                        href="https://www.twitter.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <AiOutlineTwitter />
                       </a>
@@ -333,7 +343,9 @@ const Details = () => {
                     <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#7fad39] hover:text-white flex justify-center items-center bg-purple-500 rounded-full text-white"
-                        href="#"
+                        href="https://www.linkedin.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <FaLinkedin />
                       </a>
@@ -341,7 +353,9 @@ const Details = () => {
                     <li>
                       <a
                         className="w-[38px] h-[38px] hover:bg-[#7fad39] hover:text-white flex justify-center items-center bg-blue-500 rounded-full text-white"
-                        href="#"
+                        href="https://www.github.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         <AiFillGithub />
                       </a>
@@ -363,6 +377,7 @@ const Details = () => {
                 <Link
                   to={`/dashboard/chat/${product.sellerId}`}
                   className="px-8 py-3 h-[50px] cursor-pointer hover:shadow-lg hover:shadow-lime-500/40 bg-lime-500 text-white block"
+                  onClick={handleLinkClick}
                 >
                   Chat Seller
                 </Link>
