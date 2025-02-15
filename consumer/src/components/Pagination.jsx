@@ -1,5 +1,4 @@
 import React from 'react'
-import { BsChevronDoubleLeft, BsChevronDoubleRight } from 'react-icons/bs';
 
 const Pagination = ({ pageNumber, setPageNumber, totalItem, perPage }) => {
     const totalPages = Math.ceil(totalItem / perPage);
